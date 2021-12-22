@@ -16,10 +16,10 @@ from tqdm import tqdm
 parser = argparse.ArgumentParser()
 
 parser.add_argument('--expr_dir', default='runs', help='Where to store models')
-parser.add_argument('--batchSize', type=int, default=512, help='input batch size')
+parser.add_argument('--batchSize', type=int, default=16, help='input batch size')
 parser.add_argument('--root', default='data', help='path to dataset directory')
-parser.add_argument('--trainRoot', required=True, help='path to train dataset')
-parser.add_argument('--valRoot', required=True, help='path to validation dataset')
+parser.add_argument('--trainRoot', default='data/dataset/train', help='path to train dataset')
+parser.add_argument('--valRoot', default='data/dataset/val', help='path to validation dataset')
 parser.add_argument('--domain', default='semantic', help='ground truth representations')
 parser.add_argument('--distort', action='store_true', help='use distorted images or not')
 parser.add_argument('--nh', type=int, default=512, help='size of the lstm hidden state')
@@ -66,6 +66,21 @@ val_dataset = dataset.lmdbDataset(root=opt.valRoot,
                                    batch_size=batch_size,
                                    shuffle=True,
                                    transform=dataset.resizeNormalize((800, 128))) 
+
+# train_dataset = dataset.OMRDataset(root="data",
+#                                     mode="train", 
+#                                     domain="semantic", 
+#                                     batch_size=batch_size, 
+#                                     shuffle=True, 
+#                                     num_workers=opt.num_workers, 
+#                                     transform=dataset.resizeNormalize((800, 128)))
+
+# val_dataset = dataset.OMRDataset(root="data",
+#                                     mode="val", 
+#                                     domain="semantic", 
+#                                     batch_size=batch_size, 
+#                                     shuffle=True, 
+#                                     transform=dataset.resizeNormalize((800, 128)))
 
 assert train_dataset
 
