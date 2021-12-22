@@ -1,1 +1,2 @@
-# CRNN-OMR-with-Jittor
+# Optical Music Recognition with CRNN in Jittor
+
