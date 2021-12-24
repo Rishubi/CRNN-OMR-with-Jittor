@@ -1,6 +1,6 @@
 # Optical Music Recognition with CRNN in Jittor
 
-[Files](#Files) | [Run Demo](#Run Demo) | [Train Model](#Train Model) | [Test Model](#Test Model) | [Chinese](./README.cn.md)
+[Files](#Files) | [Run Demo](#run-demo) | [Train Model](#train model) | [Test Model](#test model) | [Chinese](./README.cn.md)
 
 This repository implements Convolutional Recurrent Neural Network (CRNN, http://arxiv.org/abs/1507.05717) with [Jittor](https://cg.cs.tsinghua.edu.cn/jittor/) for optical music recognition task(OMR), with [huangb19/crnn_jittor](https://github.com/huangb19/crnn_jittor) being its counterpart. The model and the training codes are based on the [PyTorch version](https://github.com/meijieru/crnn.pytorch), and the [PrIMuS dataset](https://grfia.dlsi.ua.es/primus/) is used for training, validation and testing.
 
